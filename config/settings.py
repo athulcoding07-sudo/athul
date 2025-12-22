@@ -56,7 +56,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.users',
     'apps.adminpanel',
-    'apps.home'
+    'apps.home',
+    'apps.otp',
 ]
 AUTH_USER_MODEL = "users.User"
 
@@ -151,5 +152,22 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# ==============================
+# EMAIL CONFIGURATION
+# ==============================
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+EMAIL_HOST_USER = "athulcoding07@gmail.com"        # your email
+EMAIL_HOST_PASSWORD = "gbvc ulkp ywif vnyv"      # NOT normal password
+
+DEFAULT_FROM_EMAIL = "GameWear <athulcoding07@gmail.com>"
+
 
 
